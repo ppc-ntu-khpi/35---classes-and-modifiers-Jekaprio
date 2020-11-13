@@ -1,18 +1,21 @@
 public class Сustomer {
 	private int ID;
-	private boolean isNew = true;
-	private double total = 1000;
-
+	private boolean isNew;
+	private double total;
+	
 public Сustomer() {
 		this.ID = 1;
-    		this.isNew = true;
-    		this.total = 1000;
+    this.isNew = true;
+    this.total = 0;
 	}
 
   public int getID() {
 		return ID;
 	}
 
+	public void setID(int iD) {
+		if (ID >0) this.ID=ID;
+	}
 
 	public boolean isNew() {
 		return isNew;
@@ -27,7 +30,7 @@ public Сustomer() {
 	}
 
 	public void setTotal(double total) {
-		this.total = total;
+		if (total >0) this.total=total;
 	}
 
 	public void displayCustomerInfo() {
